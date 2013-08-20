@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
@@ -49,5 +51,11 @@ public class ReminderListFragment extends ListFragment {
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
+	}
+	
+	@Override
+	public void onCreateOptionsMenu(Menu menu,MenuInflater inflater){
+		super.onCreateOptionsMenu(menu, inflater);
+		inflater.inflate(R.menu.list_menu, menu);
 	}
 }
