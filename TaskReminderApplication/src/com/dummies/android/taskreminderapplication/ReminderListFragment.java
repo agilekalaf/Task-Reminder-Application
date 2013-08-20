@@ -53,6 +53,7 @@ public class ReminderListFragment extends ListFragment {
 		super.onCreateContextMenu(menu, v, menuInfo);
 	}
 	//creates a view menu
+	//menu access through menu button
 	@Override
 	public void onCreateOptionsMenu(Menu menu,MenuInflater inflater){
 		super.onCreateOptionsMenu(menu, inflater);
