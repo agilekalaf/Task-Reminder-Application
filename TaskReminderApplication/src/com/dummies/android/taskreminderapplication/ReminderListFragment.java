@@ -1,5 +1,7 @@
 package com.dummies.android.taskreminderapplication;
 
+import com.dummies.android.taskreminderapplication.R.string;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -18,6 +20,14 @@ public class ReminderListFragment extends ListFragment {
 		setEmptyText(getResources().getString(R.string.no_reminders));
 	}
 	
+	@Override
+	public void onViewCreated(View view,Bundle savedInstanceState){
+		super.onViewCreated(view, savedInstanceState);
+		setEmptyText(getResources().getString(string.no_reminders));
+		registerForContextMenu(getListView());
+		setHasOptionsMenu(true);
+	}
+	
 	private ListAdapter mAdapter;
 	
 	@Override
@@ -26,7 +36,6 @@ public class ReminderListFragment extends ListFragment {
 		String[] items = new String[] {"Foo","Bar","Fizz","Bin"};
 		mAdapter = new ArrayAdapter<String>(getActivity(),R.layout.reminder_row,R.id.text1,items);
 		setListAdapter(mAdapter);
-		registerForContextMenu(getListView());
 	}
 	
 	@Override

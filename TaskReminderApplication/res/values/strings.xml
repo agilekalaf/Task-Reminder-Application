@@ -10,5 +10,6 @@
     <string name="date">Reminder Date</string>
     <string name="time">Time</string>
     <string name="confirm">Save</string>
+    <string name="menu_insert">Add Reminder</string>
 
 </resources>
